@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FútbolStore</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <link rel="stylesheet" href="proyecto.css">
+ 
+
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <p>Envío gratis en compras mayores a $50</p>
+        <p>Ofertas exclusivas</p>
+    </div>
+
+    <header>
+
+        <div class="logo">
+            Fútbol<span>Store</span>
+        </div>
+
+        <input
+id="busqueda"
+type="text"
+placeholder="Buscar camisetas..."
+onkeyup="buscarCamisas()">
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Equipos</a>
+            <a href="#">Ofertas</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <div class="icons">
+
+<div class="cart-container">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<span id="contador">
+0
+</span>
+
+</div>
+
+<i class="fa-solid fa-user"></i>
+
+</div>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h4>TEMPORADA 2026</h4>
+
+            <h1>Nuevas camisetas ya disponibles</h1>
+
+            <p>
+                Los mejores equipos del mundo con calidad premium.
+                Compra las camisetas más recientes.
+            </p>
+
+            <div class="hero-buttons">
+                <button class="primary-btn">Comprar ahora</button>
+                <button class="secondary-btn">Explorar</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="benefits">
+
+        <div class="benefit">
+            <i class="fa-solid fa-shirt"></i>
+            <h3>Productos oficiales</h3>
+        </div>
+
+        <div class="benefit">
+            <i class="fa-solid fa-truck"></i>
+            <h3>Envíos rápidos</h3>
+        </div>
+
+        <div class="benefit">
+            <i class="fa-solid fa-lock"></i>
+            <h3>Compra segura</h3>
+        </div>
+
+        <div class="benefit">
+            <i class="fa-solid fa-headset"></i>
+            <h3>Atención 24/7</h3>
+        </div>
+
+    </section>
+
+    <div class="section-title">
+        <h2>Camisas Destacadas</h2>
+        <a href="#">Ver todas →</a>
+    </div>
+<p id="totalProductos"></p>
+    <div class="main-content">
+
+        <!-- PRODUCTOS DINÁMICOS -->
+        <div class="products" id="camisas-container">
+
+        </div>
+
+        <!-- FILTROS -->
+        <div class="filter">
+
+    <h3>Filtrar productos</h3>
+
+    <select id="filtroEquipo">
+
+        <option value="">Todos</option>
+        <option value="Real Madrid">Real Madrid</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Argentina">Argentina</option>
+        <option value="España">España</option>
+    </select>
+
+    <button onclick="filtrarEquipo()">
+        Aplicar filtros
+    </button>
+
+</div>
+
+    </div>
+
+    <div class="section-title">
+        <h2>Clubes Populares</h2>
+    </div>
+
+    <section class="clubs">
+
+        <div class="club">
+            <i class="fa-solid fa-futbol"></i>
+            <h3>Real Madrid</h3>
+        </div>
+
+        <div class="club">
+            <i class="fa-solid fa-futbol"></i>
+            <h3>Barcelona</h3>
+        </div>
+
+        <div class="club">
+            <i class="fa-solid fa-futbol"></i>
+            <h3>Manchester City</h3>
+        </div>
+
+        <div class="club">
+            <i class="fa-solid fa-futbol"></i>
+            <h3>PSG</h3>
+        </div>
+
+        <div class="club">
+            <i class="fa-solid fa-futbol"></i>
+            <h3>Argentina</h3>
+        </div>
+
+    </section>
+
+    <section class="offer">
+
+        <h2>Oferta Especial</h2>
+
+        <p>
+            30% de descuento en camisetas seleccionadas
+        </p>
+
+    </section>
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-box">
+
+                <h3>FútbolStore</h3>
+
+                <p>La mejor tienda de camisetas de fútbol.</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Links rápidos</h3>
+
+                <a href="#">Inicio</a>
+                <a href="#">Ofertas</a>
+                <a href="#">Contacto</a>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Contacto</h3>
+
+                <p>Email: futbolstore@gmail.com</p>
+                <p>Tel: +505 8888 7769</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Redes</h3>
+
+                <div class="socials">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div>
+
+            </div>
+
+        </div>
+<section class="admin-panel">
+
+    <h2>Agregar Nueva Camiseta</h2>
+
+    <input type="text" id="equipo" placeholder="Equipo">
+
+    <select id="talla">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+    </select>
+
+    <input type="number" id="temporada" placeholder="Temporada">
+
+    <input type="number" id="precio" placeholder="Precio">
+
+    <input type="number" id="stock" placeholder="Stock">
+
+    <input type="text" id="imagen" placeholder="Imagen">
+
+    <button onclick="agregarCamisa()">
+        Guardar Camiseta
+    </button>
+
+</section>
+    </footer>
+
+<script src="proyecto.js"></script>
+</body>
+
+</html>
