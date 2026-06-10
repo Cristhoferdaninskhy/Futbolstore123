@@ -8,10 +8,6 @@ app.use(cors());
 app.use(express.json());
 
 
-// ======================================
-// OBTENER CAMISAS
-// ======================================
-
 app.get('/camisas', async (req, res) => {
 
     try {
@@ -33,10 +29,6 @@ app.get('/camisas', async (req, res) => {
 
 });
 
-
-// ======================================
-// AGREGAR CAMISA
-// ======================================
 
 app.post('/camisas', async (req, res) => {
 
@@ -90,9 +82,6 @@ app.post('/camisas', async (req, res) => {
 });
 
 
-// ======================================
-// ACTUALIZAR CAMISA
-// ======================================
 
 app.put('/camisas/:id', async (req, res) => {
 
@@ -145,9 +134,6 @@ app.put('/camisas/:id', async (req, res) => {
 });
 
 
-// ======================================
-// ELIMINAR CAMISA
-// ======================================
 
 app.delete('/camisas/:id', async (req, res) => {
 
@@ -176,9 +162,6 @@ app.delete('/camisas/:id', async (req, res) => {
 });
 
 
-// ======================================
-// ESTADÍSTICAS
-// ======================================
 
 app.get('/estadisticas', async (req, res) => {
 
@@ -215,9 +198,6 @@ app.get('/estadisticas', async (req, res) => {
 });
 
 
-// ======================================
-// BUSCAR CAMISA POR ID
-// ======================================
 
 app.get('/camisas/:id', async (req, res) => {
 
@@ -254,10 +234,6 @@ app.get('/camisas/:id', async (req, res) => {
 
 });
 
-
-// ======================================
-// SERVIDOR
-// ======================================
 
 app.listen(3000, () => {
 

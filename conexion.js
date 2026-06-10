@@ -1,11 +1,11 @@
 const mysql = require('mysql2/promise');
 
 const pool = mysql.createPool({
-    host: 'localhost',
+    host: 'acela.proxy.rlwy.net',
     user: 'root',
-    password: '050821',
-    database: 'FutbolStore',
-    port: 3306
+    password: 'KFQSkdmsiIKOsaqdjzKCMjqdOaHTFWSd',
+    database: 'railway',
+    port: 37243
 });
 
 (async () => {
